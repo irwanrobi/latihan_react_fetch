@@ -1,0 +1,48 @@
+.card {
+    width: 50%;
+    height: auto;
+    display: flex;
+    background-color: whitesmoke;
+    padding: 20px;
+    color: black;
+    gap: 40px;
+    margin: 20px 0;
+    transition-duration: .5s;
+}
+
+.card:hover {
+    width: 52%;
+    border: 5px solid orange;
+}
+
+.card_left {
+    width: 30%;
+    height: 100%;
+}
+
+.avatar {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.card_right {
+    width: 70%;
+    height: 100%;
+
+}
+
+.username {
+    text-align: left;
+    font-weight: 300;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    color: orange;
+}
+
+.biodata {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}

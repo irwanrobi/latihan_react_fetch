@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Fetch API React",
+  "name": "Aplikasi Fetch API dengan React",
   "icons": [
     {
       "src": "favicon.ico",
