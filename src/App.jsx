@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Card from "./components/card/Card";
+import SideMenu from './components/sidemenu/SideMenu'
+import { Switch, Route, NavLink, Link } from "react-router-dom";
 
 function App() {
   // userData = variable penyimpan data
@@ -55,21 +57,41 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <SideMenu />
 
       <header className="App-header">
-        {apiData.map((e) => {
-          return (
-            <Card
-              key={e.id}
-              image={`https://picsum.photos/seed/${e.phone}/300`}
-              username={e.username}
-              name={e.name}
-              email={e.email}
-              phone={e.phone}
-              website={e.website}
-            />
-          );
-        })}
+
+        <Switch>
+
+          <Route path="/contact">
+            <h1>Ini halaman contact</h1>
+          </Route>
+
+          <Route path="/about">
+            <h1>Ini halaman about</h1>
+          </Route>
+
+          <Route path="/blog">
+            <h1>Ini halaman blog</h1>
+          </Route>
+
+          <Route path="/">
+            {apiData.map((e) => {
+              return (
+                <Card
+                  key={e.id}
+                  image={`https://picsum.photos/seed/${e.phone}/300`}
+                  username={e.username}
+                  name={e.name}
+                  email={e.email}
+                  phone={e.phone}
+                  website={e.website}
+                />
+              );
+            })}
+          </Route>
+
+        </Switch>
       </header>
     </div>
   );
